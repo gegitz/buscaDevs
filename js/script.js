@@ -111,7 +111,6 @@ function doFilter(devsList) {
       ? languagesSelected.some((item) => dev.languages.includes(item))
       : dev.languages.join('') === languagesSelected.join('');
   });
-  console.log(filteredDevs);
   return filteredDevs;
 }
 
@@ -131,7 +130,7 @@ function renderDevs() {
       const imgLanguage = document.createElement('img');
       imgLanguage.width = 25;
       imgLanguage.alt = lowerCaseLanguage;
-      imgLanguage.src = `../img/${lowerCaseLanguage}.png`;
+      imgLanguage.src = `./img/${lowerCaseLanguage}.png`;
       p.appendChild(imgLanguage);
     });
     card.classList.add('collection-item', 'avatar', 'col', 's12', 'm6', 'l4');
