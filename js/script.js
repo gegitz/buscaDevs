@@ -57,7 +57,9 @@ async function fetchDevs() {
   const uri = '../backend/devs.json';
   try {
     const ret = await doFetch(uri);
-    const data = ret.map(({ id, name, picture, programmingLanguages }) => {
+    // com backend ativo
+    //const data = ret.map(({ id, name, picture, programmingLanguages }) => {
+      const data = ret.devs.map(({ id, name, picture, programmingLanguages }) => {
       return {
         id,
         name,
