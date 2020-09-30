@@ -50,7 +50,11 @@ async function fetchDevs() {
     });
     return languages;
   }
-  const uri = 'http://localhost:3001/devs';
+  // com backend ativo
+  //const uri = 'http://localhost:3001/devs'; 
+
+  // servindo estaticamente para gh-pages
+  const uri = '../backend/devs.json';
   try {
     const ret = await doFetch(uri);
     const data = ret.map(({ id, name, picture, programmingLanguages }) => {
