@@ -54,7 +54,7 @@ async function fetchDevs() {
   //const uri = 'http://localhost:3001/devs'; 
 
   // servindo estaticamente para gh-pages
-  const uri = '../backend/devs.json';
+  const uri = './backend/devs.json';
   try {
     const ret = await doFetch(uri);
     // com backend ativo
